@@ -1,2 +1,2 @@
 GithHub repository link -https://github.com/ambika-rawat/fwd_moodle_page.git
-Live GitHub page URL-
+Live GitHub page URL- https://ambika-rawat.github.io/fwd_moodle_page/
