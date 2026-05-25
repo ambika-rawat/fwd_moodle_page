@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FWD101 – Fundamentals of Web Development</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+ 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo">🎓 EduPortal</div>
+      <span class="breadcrumb">Home / My Courses / FWD101</span>
+    </div>
+    <div class="header-right">
+      <span class="student-name">Ambika Rawat</span>
+      <div class="avatar">A</div>
+    </div>
+  </header>
+ 
+  <!-- NAV MENU -->
+  <nav class="main-nav" id="mainNav">
+    <ul>
+      <li><a href="#home" class="nav-link active" onclick="setActive(this)">🏠 Home</a></li>
+      <li><a href="#announcements" class="nav-link" onclick="setActive(this)">📢 Announcements</a></li>
+      <li><a href="#assignments" class="nav-link" onclick="setActive(this)">📝 Assignments</a></li>
+      <li><a href="#resources" class="nav-link" onclick="setActive(this)">📚 Resources</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- MAIN LAYOUT -->
+  <main class="layout" id="home">
+ 
+    <!-- COURSE INFO SECTION -->
+    <section class="course-info-card">
+      <div class="course-badge">ACTIVE</div>
+      <h1 class="course-title">Fundamentals of Web Development</h1>
+      <div class="course-meta">
+        <div class="meta-item">
+          <span class="meta-label">Course Code</span>
+          <span class="meta-value">FWD101</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Instructor</span>
+          <span class="meta-value">PRASHANT SINGH,ANMOL NARAYAN</span>
+          </span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Semester</span>
+          <span class="meta-value">Even Sem 2025–26</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Credits</span>
+          <span class="meta-value">4</span>
+        </div>
+      </div>
+    </section>
+ 
+    <div class="content-grid">
+ 
+      <!-- ANNOUNCEMENTS SECTION -->
+      <section class="card" id="announcements">
+        <div class="card-header">
+          <h2>📢 Announcements</h2>
+          <button class="toggle-btn" onclick="toggleSection('ann-body', this)">Hide</button>
+        </div>
+        <div class="card-body" id="ann-body">
+          <div class="announcement-item new">
+            <div class="ann-dot"></div>
+            <div class="ann-content">
+              <p class="ann-title">Assignment 6 Released</p>
+              <p class="ann-desc">Create a Moodle-like page using HTML, CSS, and JavaScript. Submission deadline: 1st June 2025.</p>
+              <span class="ann-date">📅Jan20, 2026</span>
+            </div>
+          </div>
+          <div class="announcement-item">
+            <div class="ann-dot"></div>
+            <div class="ann-content">
+              <p class="ann-title">Mid-Semester Results Uploaded</p>
+              <p class="ann-desc">Check your marks under the Grades section. Contact the instructor for any discrepancies before May 25.</p>
+              <span class="ann-date">📅 Jan 15, 2026</span>
+            </div>
+          </div>
+          <div class="announcement-item">
+            <div class="ann-dot"></div>
+            <div class="ann-content">
+              <p class="ann-title">Lab Schedule Change</p>
+              <p class="ann-desc">Lab session on May 22 is rescheduled to May 24, same time slot (2:00–4:00 PM) in Lab 3.</p>
+              <span class="ann-date">📅 Feb 12, 2026</span>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+      <!-- ASSIGNMENTS SECTION -->
+      <section class="card" id="assignments">
+        <div class="card-header">
+          <h2>📝 Assignments</h2>
+          <button class="toggle-btn" onclick="toggleSection('asgn-body', this)">Hide</button>
+        </div>
+        <div class="card-body" id="asgn-body">
+          <table class="assignment-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Due Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A1</td>
+                <td>HTML Basics – Personal Bio Page</td>
+                <td>Feb 15, 2026</td>
+                <td><span class="badge submitted">Submitted</span></td>
+              </tr>
+              <tr>
+                <td>A2</td>
+                <td>CSS Styling – Portfolio Layout</td>
+                <td>Mar 5, 2026</td>
+                <td><span class="badge submitted">Submitted</span></td>
+              </tr>
+              <tr>
+                <td>A3</td>
+                <td>Responsive Design – Media Queries</td>
+                <td>Mar 25, 2026</td>
+                <td><span class="badge submitted">Submitted</span></td>
+              </tr>
+              <tr>
+                <td>A4</td>
+                <td>JavaScript DOM Manipulation</td>
+                <td>Apr 15, 2026</td>
+                <td><span class="badge submitted">Submitted</span></td>
+              </tr>
+              <tr>
+                <td>A5</td>
+                <td>Form Validation with JS</td>
+                <td>May 5, 2026</td>
+                <td><span class="badge submitted">Submitted</span></td>
+              </tr>
+              <tr class="highlight-row">
+                <td>A6</td>
+                <td>Moodle-like Page (HTML+CSS+JS)</td>
+                <td>Jun 1, 2026</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="action-btn" onclick="showAlert()">📤 Submit Assignment</button>
+        </div>
+      </section>
+ 
+      <!-- RESOURCES SECTION -->
+      <section class="card full-width" id="resources">
+        <div class="card-header">
+          <h2>📚 Resources</h2>
+          <button class="toggle-btn" onclick="toggleSection('res-body', this)">Hide</button>
+        </div>
+        <div class="card-body" id="res-body">
+          <div class="resources-grid">
+            <a href="https://developer.mozilla.org" target="_blank" class="resource-card">
+              <div class="res-icon">🌐</div>
+              <div class="res-info">
+                <p class="res-title">MDN Web Docs</p>
+                <p class="res-desc">HTML, CSS, JS reference</p>
+              </div>
+            </a>
+            <a href="https://www.w3schools.com" target="_blank" class="resource-card">
+              <div class="res-icon">🏫</div>
+              <div class="res-info">
+                <p class="res-title">W3Schools</p>
+                <p class="res-desc">Interactive tutorials</p>
+              </div>
+            </a>
+            <a href="https://css-tricks.com" target="_blank" class="resource-card">
+              <div class="res-icon">🎨</div>
+              <div class="res-info">
+                <p class="res-title">CSS-Tricks</p>
+                <p class="res-desc">Flexbox, Grid guides</p>
+              </div>
+            </a>
+            <a href="https://javascript.info" target="_blank" class="resource-card">
+              <div class="res-icon">⚡</div>
+              <div class="res-info">
+                <p class="res-title">JavaScript.info</p>
+                <p class="res-desc">Modern JS tutorial</p>
+              </div>
+            </a>
+            <a href="#" class="resource-card download">
+              <div class="res-icon">📄</div>
+              <div class="res-info">
+                <p class="res-title">Lecture Notes – Week 1-5</p>
+                <p class="res-desc">⬇️ Download PDF</p>
+              </div>
+            </a>
+            <a href="#" class="resource-card download">
+              <div class="res-icon">📋</div>
+              <div class="res-info">
+                <p class="res-title">Assignment Rubric</p>
+                <p class="res-desc">⬇️ Download PDF</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+ 
+    </div>
+  </main>
+ 
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 EduPortal – Fundamentals of Web Development | Contact: fwd101@college.edu | All Rights Reserved</p>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
